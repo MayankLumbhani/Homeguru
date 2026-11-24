@@ -1,26 +1,259 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-bg: #0a0a0b;
+  --color-surface: #141416;
+  --color-surface-2: #1d1d21;
+  --color-surface-3: #26262b;
+  --color-sheet: #121214;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-fg: #ffffff;
+  --color-fg-muted: #a1a1aa;
+  --color-fg-subtle: #71717a;
+  --color-orange: #ff8a2a;
+  --color-orange-deep: #f2480a;
+  --color-purple: #7c3aed;
+  --color-purple-soft: rgba(124, 58, 237, 0.16);
+  --color-purple-border: rgba(167, 139, 250, 0.45);
+  --color-purple-text: #c4b5fd;
+  --color-amber: #fbbf24;
+  --color-amber-soft: rgba(251, 191, 36, 0.14);
+  --color-violet-soft: rgba(167, 139, 250, 0.16);
+  --color-demo-from: #7f1027;
+  --color-demo-to: #b3123a;
+  --color-phonepe: #5f259f;
+  --color-phonepe-text: #a78bfa;
+  --color-hg-blue: #7aa2ff;
+  --color-avatar-sky: #7fd6e6;
+  --color-avatar-lavender: #b9a5e8;
+  --color-danger: #f87171;
+
+  /* Gradients */
+  --gradient-cta: linear-gradient(135deg, #ff8a2a 0%, #f2480a 100%);
+  --gradient-glow-orange: radial-gradient(
+    120% 55% at 50% 0%,
+    rgba(255, 106, 26, 0.55) 0%,
+    rgba(194, 59, 0, 0.25) 38%,
+    rgba(10, 10, 11, 0) 72%
+  );
+  --gradient-glow-purple: radial-gradient(
+    120% 50% at 50% 0%,
+    rgba(109, 40, 217, 0.5) 0%,
+    rgba(59, 15, 120, 0.22) 40%,
+    rgba(10, 10, 11, 0) 75%
+  );
+  --gradient-demo: linear-gradient(90deg, var(--color-demo-from), var(--color-demo-to));
+  --gradient-fab: linear-gradient(135deg, #8b5cf6 0%, #5b21b6 100%);
+  --gradient-summary: linear-gradient(
+    160deg,
+    rgba(124, 58, 237, 0.28) 0%,
+    rgba(124, 58, 237, 0.08) 100%
+  );
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadow */
+  --shadow-cta: 0 10px 30px -8px rgba(242, 72, 10, 0.55);
+  --shadow-fab: 0 12px 28px -6px rgba(91, 33, 182, 0.65);
+  --shadow-nav: 0 16px 40px -12px rgba(0, 0, 0, 0.8);
+  --shadow-dropdown: 0 20px 50px -12px rgba(0, 0, 0, 0.8);
+  --shadow-focus: 0 0 0 3px rgba(255, 138, 42, 0.22);
+  --shadow-focus-danger: 0 0 0 3px rgba(248, 113, 113, 0.22);
+
+  /* Motion */
+  --ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-figtree);
+  --font-serif: var(--font-instrument-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility bg-cta {
+  background-image: var(--gradient-cta);
+}
+
+@utility bg-glow-orange {
+  background-image: var(--gradient-glow-orange);
+}
+
+@utility bg-glow-purple {
+  background-image: var(--gradient-glow-purple);
+}
+
+@utility bg-demo {
+  background-image: var(--gradient-demo);
+}
+
+@utility bg-fab {
+  background-image: var(--gradient-fab);
+}
+
+@utility bg-summary {
+  background-image: var(--gradient-summary);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
+/* One-off surfaces that the guidelines specify as literal values */
+@utility bg-nav {
+  background-color: rgba(20, 20, 22, 0.85);
+}
+
+@utility bg-bar {
+  background-color: rgba(10, 10, 11, 0.9);
+}
+
+@utility bg-backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@utility bg-close {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+@utility bg-handle {
+  background-color: #3a3a40;
+}
+
+@utility bg-orange-tint {
+  background-color: rgba(255, 138, 42, 0.08);
+}
+
+@utility bg-dropdown {
+  background-color: rgba(29, 29, 33, 0.96);
+}
+
+@utility border-tile {
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+@utility text-body {
+  color: #d4d4d8;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 350ms var(--ease-sheet) both;
+}
+
+.animate-sheet-up {
+  animation: sheet-up 320ms var(--ease-sheet) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 200ms ease-out both;
+}
+
+.animate-dropdown {
+  animation: dropdown-in 150ms ease-out both;
+}
+
+html {
+  color-scheme: dark;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at 50% 0%, #17171c, #0a0a0b 60%);
+  color: var(--color-fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+}
+
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* The dropdown trigger draws its own rounded border + --shadow-focus indicator. */
+button[aria-haspopup="listbox"]:focus-visible {
+  outline: none;
+}
+
+/* Dialog panels take programmatic focus; their border is the visible boundary. */
+[role="dialog"]:focus-visible {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-up,
+  .animate-sheet-up,
+  .animate-dropdown {
+    animation: none;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.01ms both;
+  }
 }

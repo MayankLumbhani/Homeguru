@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Arjun Mehta">
+  <defs>
+    <clipPath id="arjun-shirt">
+      <path d="M16 120c2-21 20-33 44-33s42 12 44 33z"/>
+    </clipPath>
+  </defs>
+  <g>
+    <path d="M16 120c2-21 20-33 44-33s42 12 44 33z" fill="#F2A03D"/>
+    <g clip-path="url(#arjun-shirt)" stroke="#C9761F" stroke-width="3" opacity="0.55">
+      <path d="M30 84v40"/>
+      <path d="M52 82v42"/>
+      <path d="M74 84v40"/>
+      <path d="M96 88v36"/>
+      <path d="M10 98h104"/>
+      <path d="M8 112h108"/>
+    </g>
+    <path d="M52 92c3 3 5 4 8 4s5-1 8-4l-3-10H55z" fill="#D8A173"/>
+    <circle cx="60" cy="58" r="25" fill="#E0AC7C"/>
+    <path d="M35 58c0-17 11-28 25-28s25 11 25 28c-3-7-6-11-9-13-5 4-10 5-16 5-7 0-12-2-16-4-4 3-7 6-9 12z" fill="#2B2B33"/>
+    <circle cx="60" cy="24" r="9" fill="#2B2B33"/>
+    <path d="M46 47c2-1 5-2 7-2" stroke="#2B2B33" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M67 45c2 0 5 1 7 2" stroke="#2B2B33" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="50" cy="60" r="2.4" fill="#2B2B33"/>
+    <circle cx="70" cy="60" r="2.4" fill="#2B2B33"/>
+    <path d="M55 72c3 3 7 3 10 0" fill="none" stroke="#9C5A34" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M37 62c-2 2-2 5 0 7" fill="none" stroke="#D8A173" stroke-width="2.5"/>
+    <path d="M83 62c2 2 2 5 0 7" fill="none" stroke="#D8A173" stroke-width="2.5"/>
+    <path d="M40 94c6-3 13-4 20-4s14 1 20 4" fill="none" stroke="#F7F7FA" stroke-width="3"/>
+  </g>
+</svg>

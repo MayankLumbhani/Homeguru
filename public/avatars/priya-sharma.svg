@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Priya Sharma">
+  <g>
+    <path d="M16 120c2-21 20-33 44-33s42 12 44 33z" fill="#1F5A66"/>
+    <path d="M46 92c4 4 9 6 14 6s10-2 14-6l-4-12H50z" fill="#F3C9A4"/>
+    <path d="M50 88h20v-8H50z" fill="#EFBE95"/>
+    <path d="M60 96c-9 0-16 4-19 9 6 3 12 4 19 4s13-1 19-4c-3-5-10-9-19-9z" fill="#F7F7FA"/>
+    <circle cx="60" cy="58" r="26" fill="#F3C9A4"/>
+    <path d="M34 60c-2-19 10-32 26-32s28 13 26 32c-3-9-7-14-11-17-5 4-12 6-20 6-6 0-10-1-14-3-4 4-6 8-7 14z" fill="#D8DAE2"/>
+    <circle cx="60" cy="26" r="9" fill="#D8DAE2"/>
+    <circle cx="34" cy="48" r="5" fill="#D8DAE2"/>
+    <circle cx="86" cy="48" r="5" fill="#D8DAE2"/>
+    <g fill="none" stroke="#3B3B44" stroke-width="2.5">
+      <circle cx="49" cy="60" r="7.5" fill="#FFFFFF" fill-opacity="0.28"/>
+      <circle cx="71" cy="60" r="7.5" fill="#FFFFFF" fill-opacity="0.28"/>
+      <path d="M56.5 60h7"/>
+      <path d="M41.5 58l-5-2"/>
+      <path d="M78.5 58l5-2"/>
+    </g>
+    <circle cx="49" cy="60" r="2.2" fill="#3B3B44"/>
+    <circle cx="71" cy="60" r="2.2" fill="#3B3B44"/>
+    <path d="M53 74c4 4 10 4 14 0" fill="none" stroke="#B9714F" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="31" cy="66" r="2.5" fill="#E5A83C"/>
+    <circle cx="89" cy="66" r="2.5" fill="#E5A83C"/>
+  </g>
+</svg>
